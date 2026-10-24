@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- WP: title-tag → "Opinión – Sergio Ludeña Visalot" -->
+  <title>Opinión — Sergio Ludeña Visalot</title>
+  <meta name="description" content="Columnas de opinión, notas de prensa y pronunciamientos de Sergio Ludeña Visalot sobre la industria del deporte y la gestión deportiva en el Perú.">
+  <meta name="theme-color" content="#1E2238">
+  <!-- WP: canonical → wp_get_canonical_url() -->
+  <link rel="canonical" href="https://sergioludena.com/opinion/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="Sergio Ludeña Visalot">
+  <meta property="og:title" content="Opinión — Sergio Ludeña Visalot">
+  <meta property="og:description" content="Columnas, notas de prensa y pronunciamientos sobre la industria del deporte.">
+  <meta property="og:url" content="https://sergioludena.com/opinion/">
+  <meta property="og:image" content="https://sergioludena.com/assets/img/og-default.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sergio Ludeña Visalot — Empresario y líder en gestión deportiva">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@sergioludenav">
+  <meta name="twitter:title" content="Opinión — Sergio Ludeña Visalot">
+  <meta name="twitter:description" content="Columnas, notas de prensa y pronunciamientos sobre la industria del deporte.">
+  <meta name="twitter:image" content="https://sergioludena.com/assets/img/og-default.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<!--@HEADER@-->
+
+<!-- home.php (página de entradas "Opinión") -->
+<main class="site-main" id="contenido" tabindex="-1">
+
+  <header class="page-header">
+    <div class="container">
+      <!-- WP: single_post_title() o título de la página asignada a page_for_posts -->
+      <h1>Opinión</h1>
+      <!-- WP: descripción → excerpt de la página "Opinión" o get_theme_mod() -->
+      <p>Artículos breves de análisis y lectura ejecutiva: columnas sobre la industria del deporte, notas de prensa oficiales y pronunciamientos de visión directiva.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:0" aria-label="Listado de artículos">
+    <div class="container">
+
+      <!-- WP: The Loop → while ( have_posts() ) : the_post(); get_template_part('template-parts/card'); -->
+      <ul class="cards">
+
+        <!-- Artículo 1 -->
+        <li>
+          <article class="card">
+            <!-- WP: if ( has_post_thumbnail() ) the_post_thumbnail('card') -->
+            <figure class="card__media"><a href="opinion-articulo.html" tabindex="-1" aria-hidden="true"><img src="assets/img/articulo-01.svg" width="1200" height="675" alt="" loading="lazy"></a></figure>
+            <div class="card__body">
+              <div class="card__meta">
+                <!-- WP: the_time( get_option('date_format') ) -->
+                <time datetime="2026-10-15">15 de octubre de 2026</time>
+                <!-- WP: the_category(', ') -->
+                <a class="card__cat" href="opinion.html">Columna</a>
+              </div>
+              <!-- WP: the_title() -->
+              <h2 class="card__title"><a href="opinion-articulo.html">El deporte como política de Estado</a></h2>
+              <!-- WP: the_excerpt() -->
+              <div class="card__excerpt"><p>Sin continuidad presupuestal ni metas medibles, cada gestión vuelve a empezar de cero. Propongo tres acuerdos mínimos que deberían sobrevivir a cualquier cambio de gobierno.</p></div>
+              <a class="link-action" href="opinion-articulo.html" aria-label="Leer artículo: El deporte como política de Estado">Leer artículo</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Artículo 2 -->
+        <li>
+          <article class="card">
+            <figure class="card__media"><a href="opinion-articulo.html" tabindex="-1" aria-hidden="true"><img src="assets/img/articulo-02.svg" width="1200" height="675" alt="" loading="lazy"></a></figure>
+            <div class="card__body">
+              <div class="card__meta">
+                <time datetime="2026-10-02">2 de octubre de 2026</time>
+                <a class="card__cat" href="opinion.html">Nota de prensa</a>
+              </div>
+              <h2 class="card__title"><a href="opinion-articulo.html">Lima 2027: la infraestructura que quedará para el país</a></h2>
+              <div class="card__excerpt"><p>Balance del plan de legado: sedes con uso posterior definido, operación a cargo de federaciones y gobiernos locales, y un calendario público de mantenimiento.</p></div>
+              <a class="link-action" href="opinion-articulo.html" aria-label="Leer artículo: Lima 2027: la infraestructura que quedará para el país">Leer artículo</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Artículo 3 -->
+        <li>
+          <article class="card">
+            <figure class="card__media"><a href="opinion-articulo.html" tabindex="-1" aria-hidden="true"><img src="assets/img/articulo-03.svg" width="1200" height="675" alt="" loading="lazy"></a></figure>
+            <div class="card__body">
+              <div class="card__meta">
+                <time datetime="2026-09-18">18 de septiembre de 2026</time>
+                <a class="card__cat" href="opinion.html">Pronunciamiento</a>
+              </div>
+              <h2 class="card__title"><a href="opinion-articulo.html">Sobre el financiamiento del alto rendimiento</a></h2>
+              <div class="card__excerpt"><p>El apoyo al deportista de élite no puede depender de un ciclo olímpico. Posición institucional frente al debate sobre becas, seguros y centros de entrenamiento.</p></div>
+              <a class="link-action" href="opinion-articulo.html" aria-label="Leer artículo: Sobre el financiamiento del alto rendimiento">Leer artículo</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Artículo 4: sin imagen destacada, título corto -->
+        <li>
+          <article class="card card--no-media">
+            <div class="card__body">
+              <div class="card__meta">
+                <time datetime="2026-08-30">30 de agosto de 2026</time>
+                <a class="card__cat" href="opinion.html">Columna</a>
+              </div>
+              <h2 class="card__title"><a href="opinion-articulo.html">Masificar primero</a></h2>
+              <div class="card__excerpt"><p>Ningún sistema de alto rendimiento sobrevive sin una base amplia. Por qué la inversión en deporte escolar y comunitario es la decisión más rentable que puede tomar el Estado.</p></div>
+              <a class="link-action" href="opinion-articulo.html" aria-label="Leer artículo: Masificar primero">Leer artículo</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Artículo 5: título muy largo -->
+        <li>
+          <article class="card">
+            <figure class="card__media"><a href="opinion-articulo.html" tabindex="-1" aria-hidden="true"><img src="assets/img/articulo-05.svg" width="1200" height="675" alt="" loading="lazy"></a></figure>
+            <div class="card__body">
+              <div class="card__meta">
+                <time datetime="2026-08-12">12 de agosto de 2026</time>
+                <a class="card__cat" href="opinion.html">Columna</a>
+              </div>
+              <h2 class="card__title"><a href="opinion-articulo.html">Por qué la profesionalización de la gestión en los clubes del fútbol peruano es la reforma pendiente que nadie quiere asumir y cómo empezarla sin esperar una nueva ley</a></h2>
+              <div class="card__excerpt"><p>Directorios independientes, estados financieros auditados y licencias con consecuencias reales. Lo que ya está al alcance de los clubes hoy, sin cambiar una sola norma.</p></div>
+              <a class="link-action" href="opinion-articulo.html" aria-label="Leer artículo: Por qué la profesionalización de la gestión en los clubes del fútbol peruano es la reforma pendiente">Leer artículo</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Artículo 6 -->
+        <li>
+          <article class="card">
+            <figure class="card__media"><a href="opinion-articulo.html" tabindex="-1" aria-hidden="true"><img src="assets/img/articulo-06.svg" width="1200" height="675" alt="" loading="lazy"></a></figure>
+            <div class="card__body">
+              <div class="card__meta">
+                <time datetime="2026-07-21">21 de julio de 2026</time>
+                <a class="card__cat" href="opinion.html">Nota de prensa</a>
+              </div>
+              <h2 class="card__title"><a href="opinion-articulo.html">Lo que enseña una reestructuración concursal en el fútbol</a></h2>
+              <div class="card__excerpt"><p>Diez años de administración concursal en un club profesional dejan lecciones sobre disciplina financiera, gobierno institucional y relación con la hinchada.</p></div>
+              <a class="link-action" href="opinion-articulo.html" aria-label="Leer artículo: Lo que enseña una reestructuración concursal en el fútbol">Leer artículo</a>
+            </div>
+          </article>
+        </li>
+
+      </ul>
+
+      <!-- WP: the_posts_pagination( array( 'prev_text' => 'Anterior', 'next_text' => 'Siguiente' ) ) -->
+      <nav class="pagination" aria-label="Paginación de artículos">
+        <ul class="pagination__list">
+          <li><span class="is-disabled" aria-disabled="true">Anterior</span></li>
+          <li><span aria-current="page">1</span></li>
+          <li><a href="opinion.html">2</a></li>
+          <li><a href="opinion.html">3</a></li>
+          <li><a href="opinion.html">Siguiente</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </section>
+
+</main>
+
+<!--@FOOTER@-->
+</body>
+</html>

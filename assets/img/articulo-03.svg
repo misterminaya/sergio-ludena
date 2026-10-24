@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Imagen destacada 03">
+  <rect width="1200" height="675" fill="#F4F5F7"/>
+  <rect x="1" y="1" width="1198" height="673" fill="none" stroke="#9B1B30" stroke-width="2"/>
+  <line x1="0" y1="0" x2="1200" y2="675" stroke="#9B1B30" stroke-opacity=".25"/>
+  <line x1="1200" y1="0" x2="0" y2="675" stroke="#9B1B30" stroke-opacity=".25"/>
+  <text x="50%" y="50%" fill="#1E2238" font-family="Inter, Arial, sans-serif" font-size="54" text-anchor="middle" dominant-baseline="middle">Imagen destacada 03</text>
+  <text x="50%" y="58%" fill="#1E2238" fill-opacity=".7" font-family="Inter, Arial, sans-serif" font-size="36" text-anchor="middle" dominant-baseline="middle">1200 × 675</text>
+</svg>

@@ -1,0 +1,61 @@
+<!-- ============================================================
+     partials/sidebar.html  →  sidebar.php
+     Barra lateral de single.php. En WordPress: <?php get_sidebar(); ?>
+     Puede construirse con widgets (register_sidebar) o con este HTML fijo.
+     ============================================================ -->
+<aside class="sidebar" aria-label="Barra lateral">
+  <div class="sidebar__inner">
+
+    <!-- WP: tarjeta de autor → get_the_author(), get_avatar() o foto del Personalizador -->
+    <section class="widget widget--author" aria-labelledby="widget-autor">
+      <img class="widget__avatar" src="assets/img/hero-retrato.svg" width="880" height="1100" alt="Sergio Ludeña Visalot" loading="lazy">
+      <h2 class="widget__title" id="widget-autor">Sergio Ludeña Visalot</h2>
+      <p class="widget__subtitle">Empresario y líder en gestión deportiva</p>
+      <p class="widget__text">Director General de Cienciano, ex Presidente del IPD y del Comité Organizador de los Juegos Panamericanos 2027.</p>
+      <a class="link-action" href="index.html#trayectoria">Conocer trayectoria</a>
+      <!-- WP: URLs de redes → get_theme_mod() -->
+      <ul class="social-inline widget__social" aria-label="Redes sociales">
+        <li><a href="https://www.facebook.com/sergioludenav" target="_blank" rel="noopener" aria-label="Facebook (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+        <li><a href="https://www.instagram.com/sergioludenav" target="_blank" rel="noopener" aria-label="Instagram (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/sergioludenav" target="_blank" rel="noopener" aria-label="LinkedIn (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+        <li><a href="https://x.com/sergioludenav" target="_blank" rel="noopener" aria-label="X (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+        <li><a href="https://www.tiktok.com/@sergioludenav" target="_blank" rel="noopener" aria-label="TikTok (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+      </ul>
+    </section>
+
+    <!-- WP: más artículos → WP_Query( posts_per_page => 4, post__not_in => [get_the_ID()] ) -->
+    <section class="widget" aria-labelledby="widget-mas">
+      <h2 class="widget__title" id="widget-mas">Más artículos</h2>
+      <ul class="widget__posts">
+        <li>
+          <time datetime="2026-10-02">2 de octubre de 2026</time>
+          <a href="opinion-articulo.html">Lima 2027: la infraestructura que quedará para el país</a>
+        </li>
+        <li>
+          <time datetime="2026-09-18">18 de septiembre de 2026</time>
+          <a href="opinion-articulo.html">Sobre el financiamiento del alto rendimiento</a>
+        </li>
+        <li>
+          <time datetime="2026-08-30">30 de agosto de 2026</time>
+          <a href="opinion-articulo.html">Masificar primero</a>
+        </li>
+        <li>
+          <time datetime="2026-07-21">21 de julio de 2026</time>
+          <a href="opinion-articulo.html">Lo que enseña una reestructuración concursal en el fútbol</a>
+        </li>
+      </ul>
+      <a class="link-action" href="opinion.html">Ver todos los artículos</a>
+    </section>
+
+    <!-- WP: categorías → wp_list_categories( array( 'title_li' => '', 'show_count' => true ) ) -->
+    <section class="widget" aria-labelledby="widget-cat">
+      <h2 class="widget__title" id="widget-cat">Categorías</h2>
+      <ul class="widget__cats">
+        <li><a href="opinion.html">Columna</a><span class="widget__count">3</span></li>
+        <li><a href="opinion.html">Nota de prensa</a><span class="widget__count">2</span></li>
+        <li><a href="opinion.html">Pronunciamiento</a><span class="widget__count">1</span></li>
+      </ul>
+    </section>
+
+  </div>
+</aside>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada — Sergio Ludeña Visalot</title>
+  <meta name="description" content="La página que buscas no existe o fue movida. Vuelve al inicio o consulta los artículos de Opinión.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1E2238">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<!--@HEADER@-->
+
+<!-- 404.php -->
+<main class="site-main" id="contenido" tabindex="-1">
+  <section class="error-page" aria-labelledby="error-title">
+    <div class="container">
+      <p class="error-page__code" aria-hidden="true">404</p>
+      <h1 id="error-title">Página no encontrada</h1>
+      <p>La dirección que escribiste no corresponde a ninguna página de este sitio. Puede que el enlace esté mal escrito o que el contenido haya sido movido.</p>
+      <div class="error-page__actions">
+        <!-- WP: home_url('/') -->
+        <a class="btn btn--primary" href="index.html#inicio">Ir al inicio</a>
+        <!-- WP: get_permalink( get_option('page_for_posts') ) -->
+        <a class="btn btn--outline" href="opinion.html">Ver artículos de Opinión</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!--@FOOTER@-->
+</body>
+</html>

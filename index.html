@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- WP: <title> → wp_head() con add_theme_support('title-tag') -->
+  <title>Sergio Ludeña Visalot — Empresario y líder en gestión deportiva</title>
+  <meta name="description" content="Empresario y líder en gestión deportiva. Director General de Cienciano, ex Presidente del IPD y del Comité Organizador de los Juegos Panamericanos 2027. Masificación, profesionalización y alto rendimiento para la transformación del deporte en el Perú.">
+  <meta name="theme-color" content="#1E2238">
+  <!-- WP: canonical → wp_get_canonical_url() -->
+  <link rel="canonical" href="https://sergioludena.com/">
+
+  <!-- WP: Open Graph → plugin SEO o función propia en functions.php -->
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="Sergio Ludeña Visalot">
+  <meta property="og:title" content="Sergio Ludeña Visalot — Empresario y líder en gestión deportiva">
+  <meta property="og:description" content="Director General de Cienciano, ex Presidente del IPD y del Comité Organizador de los Juegos Panamericanos 2027.">
+  <meta property="og:url" content="https://sergioludena.com/">
+  <meta property="og:image" content="https://sergioludena.com/assets/img/og-default.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sergio Ludeña Visalot — Empresario y líder en gestión deportiva">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@sergioludenav">
+  <meta name="twitter:title" content="Sergio Ludeña Visalot — Empresario y líder en gestión deportiva">
+  <meta name="twitter:description" content="Director General de Cienciano, ex Presidente del IPD y del Comité Organizador de los Juegos Panamericanos 2027.">
+  <meta name="twitter:image" content="https://sergioludena.com/assets/img/og-default.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
+  <!-- WP: wp_enqueue_style('main', get_stylesheet_uri()) -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- WP: JSON-LD Person → salida en wp_head desde functions.php; sameAs con las URLs del Personalizador -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sergio Ludeña Visalot",
+    "jobTitle": "Empresario y líder en gestión deportiva",
+    "description": "Director General de Cienciano, ex Presidente del Instituto Peruano del Deporte (IPD) y del Comité Organizador de los Juegos Panamericanos 2027.",
+    "url": "https://sergioludena.com/",
+    "image": "https://sergioludena.com/assets/img/og-default.png",
+    "email": "mailto:contacto@sergioludena.com",
+    "nationality": { "@type": "Country", "name": "Perú" },
+    "sameAs": [
+      "https://www.facebook.com/sergioludenav",
+      "https://www.instagram.com/sergioludenav",
+      "https://www.linkedin.com/in/sergioludenav",
+      "https://x.com/sergioludenav",
+      "https://www.tiktok.com/@sergioludenav"
+    ]
+  }
+  </script>
+</head>
+<body>
+<!-- ============================================================
+     partials/header.html  →  header.php
+     Incluido tal cual en todas las páginas del prototipo.
+     En WordPress: <?php get_header(); ?>
+     ============================================================ -->
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<!-- Sprite SVG monocromático (currentColor). En WP puede vivir en header.php o en un partial. -->
+<svg xmlns="http://www.w3.org/2000/svg" hidden aria-hidden="true" focusable="false">
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M24 12.073C24 5.446 18.627.073 12 .073S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="container site-header__inner">
+    <!-- WP: nombre del sitio → bloginfo('name') / home_url('/') -->
+    <a class="brand" href="index.html#inicio" rel="home">SERGIO LUDEÑA VISALOT</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+
+    <!-- WP: menú → wp_nav_menu( array( 'theme_location' => 'principal' ) ).
+         data-section se usa para resaltar la sección activa en la landing. -->
+    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html#inicio" data-section="inicio">Inicio</a></li>
+        <li><a class="site-nav__link" href="index.html#trayectoria" data-section="trayectoria">Trayectoria</a></li>
+        <li><a class="site-nav__link" href="opinion.html" data-section="opinion" data-page="opinion">Opinión</a></li>
+        <li><a class="site-nav__link" href="index.html#contacto" data-section="contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- front-page.php -->
+<main class="site-main" id="contenido" tabindex="-1">
+
+  <!-- ===================== 1. HERO ===================== -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <!-- WP: h1 → nombre del sitio o campo del Personalizador -->
+        <h1 class="hero__name hero__enter" id="hero-title">SERGIO LUDEÑA VISALOT</h1>
+        <!-- WP: subtítulo → bloginfo('description') -->
+        <p class="hero__subtitle hero__enter">Empresario y líder en gestión deportiva</p>
+        <!-- WP: extracto institucional → get_theme_mod('hero_extracto') -->
+        <p class="hero__excerpt hero__enter">Empresario y líder en gestión deportiva. Director General de Cienciano, ex Presidente del IPD y del Comité Organizador de los Juegos Panamericanos 2027. Masificación, profesionalización y alto rendimiento para la transformación del deporte en el Perú.</p>
+        <div class="hero__actions hero__enter">
+          <a class="btn btn--primary" href="#trayectoria">Conocer trayectoria</a>
+          <a class="btn btn--outline" href="#contacto">Contacto</a>
+        </div>
+        <!-- WP: URLs de redes → get_theme_mod() -->
+        <ul class="social-inline hero__enter" aria-label="Redes sociales">
+          <li><a href="https://www.facebook.com/sergioludenav" target="_blank" rel="noopener" aria-label="Facebook (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a href="https://www.instagram.com/sergioludenav" target="_blank" rel="noopener" aria-label="Instagram (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/sergioludenav" target="_blank" rel="noopener" aria-label="LinkedIn (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+          <li><a href="https://x.com/sergioludenav" target="_blank" rel="noopener" aria-label="X (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+          <li><a href="https://www.tiktok.com/@sergioludenav" target="_blank" rel="noopener" aria-label="TikTok (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+        </ul>
+      </div>
+      <!-- WP: foto principal → get_theme_mod('hero_foto') o imagen destacada de la portada. Sin lazy: es la imagen LCP. -->
+      <figure class="hero__figure hero__enter">
+        <img src="assets/img/hero-retrato.svg" width="880" height="1100" alt="Sergio Ludeña Visalot, retrato en plano medio" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== 2. CITA DIRECTIVA ===================== -->
+  <section class="quote section--dark" aria-label="Cita directiva">
+    <div class="container">
+      <!-- WP: cita y firma → get_theme_mod('cita_texto'), get_theme_mod('cita_firma') -->
+      <blockquote>
+        <p class="quote__text">La masificación, la profesionalización y el alto rendimiento son los pilares fundamentales para lograr la verdadera transformación del deporte en el Perú.</p>
+        <footer><cite class="quote__author">SERGIO LUDEÑA VISALOT</cite></footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===================== 3. TRAYECTORIA ===================== -->
+  <section class="section" id="trayectoria" aria-labelledby="trayectoria-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="trayectoria-title">Trayectoria</h2>
+        <p>Más de dos décadas entre la alta dirección empresarial y la conducción del deporte peruano.</p>
+      </div>
+
+      <div class="profile-grid">
+      <!-- WP: perfil profesional → contenido de la portada (the_content) o campo del Personalizador -->
+      <div class="profile reveal">
+        <p>Ejecutivo de Alta Dirección con más de dos décadas de trayectoria orientada a la rentabilidad, reestructuración y liderazgo estratégico de organizaciones deportivas y empresariales. A lo largo de mi carrera profesional, he consolidado experiencia en la dirección corporativa de proyectos de infraestructura, estructuración financiera, sistemas de seguridad integral y la conducción de entidades deportivas de máxima exigencia.</p>
+        <p>Como Presidente del Instituto Peruano del Deporte (IPD) (2025-2026), lideré la gestión de activos y presupuesto a escala nacional, además de presidir los comités organizadores de los Juegos Panamericanos Lima 2027 y Bolivarianos Ayacucho-Lima 2025. Asimismo, he ejercido cargos de alta responsabilidad como Presidente de Directorio, Administrador Concursal y Director General, aplicando un enfoque transversal que combina visión de negocio con desarrollo institucional, respaldado por mi formación técnica como Oficial de Armas (Finanzas) de la Fuerza Aérea del Perú.</p>
+        <p>Actualmente soy Doctorando en Políticas Públicas y Gestión del Estado. Cuento con una sólida base académica que incluye doble Maestría (MBA en Administración de Negocios y MBA en Dirección de Entidades Deportivas), Licenciatura en Administración de Empresas y especializaciones en negociación, resolución de conflictos y gestión deportiva. Mi visión se centra en liderar la transformación y el crecimiento sostenible de instituciones deportivas y empresariales hacia estándares internacionales de excelencia.</p>
+      </div>
+
+      <!-- WP: panel de síntesis → campos repetibles (etiqueta + valor) del Personalizador o ACF.
+           Los datos son los del brief; no se inventa ninguno. -->
+      <aside class="facts reveal" aria-labelledby="facts-title">
+        <h3 class="facts__title" id="facts-title">En síntesis</h3>
+        <dl class="facts__list">
+          <div class="facts__item">
+            <dt>Cargo actual</dt>
+            <dd>Director General de Cienciano</dd>
+          </div>
+          <div class="facts__item">
+            <dt>Presidente del Directorio</dt>
+            <dd>Grupo Inmobiliario Comunidad S.A.C. <span class="facts__period">2011 – actualidad</span></dd>
+          </div>
+          <div class="facts__item">
+            <dt>Presidente del IPD</dt>
+            <dd>Instituto Peruano del Deporte <span class="facts__period">2025 – 2026</span></dd>
+          </div>
+          <div class="facts__item">
+            <dt>Comités organizadores</dt>
+            <dd>Juegos Panamericanos y Parapanamericanos "Lima 2027" y Juegos Bolivarianos "Ayacucho-Lima 2025"</dd>
+          </div>
+          <div class="facts__item">
+            <dt>Formación</dt>
+            <dd>Doctorando en Políticas Públicas y Gestión del Estado. MBA en Dirección de Entidades Deportivas. Maestro en Administración de Negocios. Licenciado en Administración de Empresas.</dd>
+          </div>
+          <div class="facts__item">
+            <dt>Formación técnica</dt>
+            <dd>Oficial de Armas – Especialidad en Finanzas, Fuerza Aérea del Perú</dd>
+          </div>
+          <div class="facts__item">
+            <dt>Representación internacional</dt>
+            <dd>Representante del Fútbol Sudamericano en Global Football Alliance <span class="facts__period">2021 – actualidad</span></dd>
+          </div>
+        </dl>
+      </aside>
+      </div><!-- /.profile-grid -->
+
+      <!-- WP: línea de tiempo → campos repetibles (ACF/bloques) o HTML en la portada -->
+      <h3 class="visually-hidden">Cargos clave</h3>
+      <ol class="timeline reveal">
+        <li class="timeline__item">
+          <span class="timeline__period">2025 – 2026</span>
+          <div>
+            <h4 class="timeline__role">Presidente</h4>
+            <p class="timeline__org">Instituto Peruano del Deporte (IPD)</p>
+            <p class="timeline__desc">Institución rectora del deporte en el Perú, administrando activos e infraestructura deportiva pública por más de S/ 2,000 millones.</p>
+          </div>
+        </li>
+        <li class="timeline__item timeline__item--current">
+          <span class="timeline__period">2015 – actualidad</span>
+          <div>
+            <h4 class="timeline__role">Administrador Concursal (Designado por SUNAT)</h4>
+            <p class="timeline__org">Asociación Deportiva de Fútbol Profesional Club Cienciano del Cusco</p>
+            <p class="timeline__desc">Proceso de reestructuración económica, financiera e institucional del equipo profesional, primer y único campeón peruano en torneos internacionales.</p>
+          </div>
+        </li>
+        <li class="timeline__item timeline__item--current">
+          <span class="timeline__period">2011 – actualidad</span>
+          <div>
+            <h4 class="timeline__role">Presidente del Directorio</h4>
+            <p class="timeline__org">Grupo Inmobiliario Comunidad S.A.C.</p>
+            <p class="timeline__desc">Grupo constructor e inmobiliario dedicado al desarrollo de proyectos para el sector privado y el Gobierno Peruano.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__period">2016 – 2020</span>
+          <div>
+            <h4 class="timeline__role">Presidente</h4>
+            <p class="timeline__org">Asociación Deportiva de Fútbol Profesional de Segunda División (ADFP-SD)</p>
+            <p class="timeline__desc">Organismo del fútbol peruano responsable de liderar y gestionar las competencias de la Segunda División profesional.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__period">2009 – 2020</span>
+          <div>
+            <h4 class="timeline__role">Director General</h4>
+            <p class="timeline__org">Grupo Swiss Perú S.A.C.</p>
+            <p class="timeline__desc">Dirección general del grupo empresarial dedicado al diseño, desarrollo e implementación de sistemas de seguridad.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__period">2004 – 2007</span>
+          <div>
+            <h4 class="timeline__role">Oficial de Armas – Especialidad en Finanzas (Situación de retiro)</h4>
+            <p class="timeline__org">Fuerza Aérea del Perú (FAP)</p>
+            <p class="timeline__desc">Institución militar responsable de todas las actividades aeroespaciales del Perú.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- WP: acordeones → bloques "Detalles" del editor o campos; el HTML interno es el que estiliza .accordion -->
+      <div class="accordion reveal">
+
+        <div class="accordion__item">
+          <h3 class="accordion__heading">
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="acc-experiencia" id="acc-experiencia-btn">
+              <span>Experiencia completa</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="accordion__panel" id="acc-experiencia" role="region" aria-labelledby="acc-experiencia-btn" hidden>
+            <div class="accordion__inner">
+            <ul class="cv-list">
+              <li class="cv-item">
+                <p class="cv-item__org">INSTITUTO PERUANO DEL DEPORTE (IPD)</p>
+                <p class="cv-item__role">Presidente <span class="cv-item__period">2025 – 2026</span></p>
+                <p class="cv-item__desc">Institución rectora del deporte en el Perú, administrando activos e infraestructura deportiva pública por más de S/ 2,000 millones.</p>
+                <ul class="cv-item__bullets">
+                  <li>Presidente del Comité Organizador de los Juegos Bolivarianos "Ayacucho-Lima 2025".</li>
+                  <li>Presidente del Comité Organizador de los Juegos Panamericanos y Parapanamericanos "Lima 2027".</li>
+                </ul>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">ASOCIACIÓN DEPORTIVA DE FÚTBOL PROFESIONAL CLUB CIENCIANO DEL CUSCO</p>
+                <p class="cv-item__role">Administrador Concursal (Designado por SUNAT) <span class="cv-item__period">2015 – actualidad</span></p>
+                <p class="cv-item__desc">Proceso de reestructuración económica, financiera e institucional del equipo profesional, primer y único campeón peruano en torneos internacionales.</p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">GRUPO INMOBILIARIO COMUNIDAD S.A.C.</p>
+                <p class="cv-item__role">Presidente del Directorio <span class="cv-item__period">2011 – actualidad</span></p>
+                <p class="cv-item__desc">Grupo constructor e inmobiliario dedicado al desarrollo de proyectos para el sector privado y el Gobierno Peruano.</p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">ASOCIACIÓN DEPORTIVA DE FÚTBOL PROFESIONAL DE SEGUNDA DIVISIÓN (ADFP-SD)</p>
+                <p class="cv-item__role">Presidente <span class="cv-item__period">2016 – 2020</span></p>
+                <p class="cv-item__desc">Organismo del fútbol peruano responsable de liderar y gestionar las competencias de la Segunda División profesional.</p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">GRUPO SWISS PERÚ S.A.C.</p>
+                <p class="cv-item__role">Director General <span class="cv-item__period">2009 – 2020</span></p>
+                <p class="cv-item__desc">Dirección general del grupo empresarial dedicado al diseño, desarrollo e implementación de sistemas de seguridad.</p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">CONSTRUCCIONES COMUNIDAD S.A.C.</p>
+                <p class="cv-item__role">Director General <span class="cv-item__period">2013 – 2019</span></p>
+                <p class="cv-item__desc">Gestión ejecutiva y operativa de la empresa constructora.</p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">FUERZA AÉREA DEL PERÚ (FAP)</p>
+                <p class="cv-item__role">Oficial de Armas – Especialidad en Finanzas (Situación de retiro) <span class="cv-item__period">2004 – 2007</span></p>
+                <p class="cv-item__desc">Institución militar responsable de todas las actividades aeroespaciales del Perú.</p>
+                <ul class="cv-item__bullets">
+                  <li>Jefe de Moneda Extranjera, Jefe de Presupuesto y Subjefe de Finanzas de la institución.</li>
+                </ul>
+              </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <h3 class="accordion__heading">
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="acc-formacion" id="acc-formacion-btn">
+              <span>Formación académica</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="accordion__panel" id="acc-formacion" role="region" aria-labelledby="acc-formacion-btn" hidden>
+            <div class="accordion__inner">
+            <ul class="cv-list">
+              <li class="cv-item">
+                <p class="cv-item__org">Doctorando en Políticas Públicas y Gestión del Estado</p>
+                <p class="cv-item__role">Centro de Altos Estudios Nacionales (CAEN) <span class="cv-item__period">2026 – 2029</span></p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">Master of Business Administration (MBA) – Dirección de Entidades Deportivas</p>
+                <p class="cv-item__role">Universidad Europea <span class="cv-item__period">2019 – 2022</span></p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">Maestro en Administración de Negocios</p>
+                <p class="cv-item__role">Universidad San Martín de Porres <span class="cv-item__period">2005 – 2020</span></p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">Licenciado en Administración de Empresas</p>
+                <p class="cv-item__role">Universidad Nacional Federico Villarreal <span class="cv-item__period">1999 – 2004</span></p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">Escuela de Oficiales de la Fuerza Aérea del Perú - EOFAP</p>
+                <p class="cv-item__role">Bachiller, Ciencias de la Administración Aeroespacial <span class="cv-item__period">1999 – 2003</span></p>
+              </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <h3 class="accordion__heading">
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="acc-especializaciones" id="acc-especializaciones-btn">
+              <span>Especializaciones y certificaciones</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="accordion__panel" id="acc-especializaciones" role="region" aria-labelledby="acc-especializaciones-btn" hidden>
+            <div class="accordion__inner">
+            <ul class="cv-list">
+              <li class="cv-item">
+                <p class="cv-item__org">Programa de Gestión Estratégica de Poder Aeroespacial y Ciberespacio (PROGEPAC)</p>
+                <p class="cv-item__role">Invitado de Honor, Fuerza Aérea del Perú <span class="cv-item__period">(2026)</span></p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">Diplomado en Gestión Deportiva</p>
+                <p class="cv-item__role">CONMEBOL <span class="cv-item__period">2021</span></p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">Curso de Negociación y Solución de Conflictos (Metodología Harvard)</p>
+                <p class="cv-item__role">Cambridge International Consulting (CIC) <span class="cv-item__period">2011</span></p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">Especialización en Presupuesto Público y Gestión por Resultados</p>
+                <p class="cv-item__role">Universidad Nacional Mayor de San Marcos <span class="cv-item__period">(2007)</span></p>
+              </li>
+              <li class="cv-item">
+                <p class="cv-item__org">Inglés (Nivel Intermedio)</p>
+                <p class="cv-item__role">Centro de Idiomas de la Pontificia Universidad Católica del Perú <span class="cv-item__period">(2004)</span></p>
+              </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <h3 class="accordion__heading">
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="acc-deportiva" id="acc-deportiva-btn">
+              <span>Trayectoria deportiva</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="accordion__panel" id="acc-deportiva" role="region" aria-labelledby="acc-deportiva-btn" hidden>
+            <div class="accordion__inner">
+            <div class="cv-group">
+              <h4 class="cv-group__title">Federación Deportiva Militar del Perú – Especialidad de Taekwondo:</h4>
+              <ul>
+                <li>Integrante de la Selección Nacional (2003).</li>
+                <li>Campeón Nacional (2003).</li>
+                <li>Campeón Metropolitano (2003).</li>
+                <li>Campeón Nacional Militar (2002).</li>
+                <li>Representante del Perú en los XII Juegos Panamericanos (2002).</li>
+              </ul>
+            </div>
+            <div class="cv-group">
+              <h4 class="cv-group__title">Global Football Alliance</h4>
+              <ul>
+                <li>Representante del Fútbol Sudamericano en esta organización internacional de fútbol de alcance mundial (2021 – actualidad).</li>
+              </ul>
+            </div>
+            <div class="cv-group">
+              <h4 class="cv-group__title">Professional Association of Diving Instructors (PADI)</h4>
+              <ul>
+                <li>Buzo Profesional certificado.</li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4. OPINIÓN (últimas 3) ===================== -->
+  <section class="section section--soft" id="opinion" aria-labelledby="opinion-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="opinion-title">Opinión</h2>
+        <p>Columnas, notas de prensa y pronunciamientos sobre la industria del deporte.</p>
+      </div>
+
+      <!-- WP: WP_Query( posts_per_page => 3 ) → loop con get_template_part('template-parts/card') -->
+      <ul class="cards reveal">
+        <li>
+          <article class="card">
+            <!-- WP: the_post_thumbnail('card') -->
+            <figure class="card__media"><a href="opinion-articulo.html" tabindex="-1" aria-hidden="true"><img src="assets/img/articulo-01.svg" width="1200" height="675" alt="" loading="lazy"></a></figure>
+            <div class="card__body">
+              <div class="card__meta">
+                <!-- WP: the_time() -->
+                <time datetime="2026-10-15">15 de octubre de 2026</time>
+                <!-- WP: the_category() -->
+                <a class="card__cat" href="opinion.html">Columna</a>
+              </div>
+              <!-- WP: the_title() con the_permalink() -->
+              <h3 class="card__title"><a href="opinion-articulo.html">El deporte como política de Estado</a></h3>
+              <!-- WP: the_excerpt() -->
+              <div class="card__excerpt"><p>Sin continuidad presupuestal ni metas medibles, cada gestión vuelve a empezar de cero. Propongo tres acuerdos mínimos que deberían sobrevivir a cualquier cambio de gobierno.</p></div>
+              <a class="link-action" href="opinion-articulo.html" aria-label="Leer artículo: El deporte como política de Estado">Leer artículo</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <figure class="card__media"><a href="opinion-articulo.html" tabindex="-1" aria-hidden="true"><img src="assets/img/articulo-02.svg" width="1200" height="675" alt="" loading="lazy"></a></figure>
+            <div class="card__body">
+              <div class="card__meta">
+                <time datetime="2026-10-02">2 de octubre de 2026</time>
+                <a class="card__cat" href="opinion.html">Nota de prensa</a>
+              </div>
+              <h3 class="card__title"><a href="opinion-articulo.html">Lima 2027: la infraestructura que quedará para el país</a></h3>
+              <div class="card__excerpt"><p>Balance del plan de legado: sedes con uso posterior definido, operación a cargo de federaciones y gobiernos locales, y un calendario público de mantenimiento.</p></div>
+              <a class="link-action" href="opinion-articulo.html" aria-label="Leer artículo: Lima 2027: la infraestructura que quedará para el país">Leer artículo</a>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <figure class="card__media"><a href="opinion-articulo.html" tabindex="-1" aria-hidden="true"><img src="assets/img/articulo-03.svg" width="1200" height="675" alt="" loading="lazy"></a></figure>
+            <div class="card__body">
+              <div class="card__meta">
+                <time datetime="2026-09-18">18 de septiembre de 2026</time>
+                <a class="card__cat" href="opinion.html">Pronunciamiento</a>
+              </div>
+              <h3 class="card__title"><a href="opinion-articulo.html">Sobre el financiamiento del alto rendimiento</a></h3>
+              <div class="card__excerpt"><p>El apoyo al deportista de élite no puede depender de un ciclo olímpico. Posición institucional frente al debate sobre becas, seguros y centros de entrenamiento.</p></div>
+              <a class="link-action" href="opinion-articulo.html" aria-label="Leer artículo: Sobre el financiamiento del alto rendimiento">Leer artículo</a>
+            </div>
+          </article>
+        </li>
+      </ul>
+
+      <div class="section-foot">
+        <!-- WP: get_permalink( get_option('page_for_posts') ) -->
+        <a class="btn btn--outline" href="opinion.html">Ver todas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. REDES SOCIALES ===================== -->
+  <section class="section section--neutral" id="redes" aria-labelledby="redes-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 id="redes-title">Sigue mi gestión</h2>
+        <p>Actividad institucional, prensa y agenda deportiva en las redes oficiales.</p>
+      </div>
+
+      <!-- WP: URLs → get_theme_mod('red_facebook'), etc. Sin feeds en vivo ni scripts de terceros. -->
+      <ul class="social-cards reveal">
+        <li>
+          <a class="social-card" href="https://www.facebook.com/sergioludenav" target="_blank" rel="noopener" aria-label="Seguir en Facebook (se abre en una pestaña nueva)">
+            <span class="social-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></span>
+            <span class="social-card__name">Facebook</span>
+            <span class="social-card__handle">@sergioludenav</span>
+            <span class="social-card__cta link-action" aria-hidden="true">Seguir</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-card" href="https://www.instagram.com/sergioludenav" target="_blank" rel="noopener" aria-label="Seguir en Instagram (se abre en una pestaña nueva)">
+            <span class="social-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></span>
+            <span class="social-card__name">Instagram</span>
+            <span class="social-card__handle">@sergioludenav</span>
+            <span class="social-card__cta link-action" aria-hidden="true">Seguir</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-card" href="https://www.linkedin.com/in/sergioludenav" target="_blank" rel="noopener" aria-label="Seguir en LinkedIn (se abre en una pestaña nueva)">
+            <span class="social-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></span>
+            <span class="social-card__name">LinkedIn</span>
+            <span class="social-card__handle">@sergioludenav</span>
+            <span class="social-card__cta link-action" aria-hidden="true">Seguir</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-card" href="https://x.com/sergioludenav" target="_blank" rel="noopener" aria-label="Seguir en X (se abre en una pestaña nueva)">
+            <span class="social-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span>
+            <span class="social-card__name">X</span>
+            <span class="social-card__handle">@sergioludenav</span>
+            <span class="social-card__cta link-action" aria-hidden="true">Seguir</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-card" href="https://www.tiktok.com/@sergioludenav" target="_blank" rel="noopener" aria-label="Seguir en TikTok (se abre en una pestaña nueva)">
+            <span class="social-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></span>
+            <span class="social-card__name">TikTok</span>
+            <span class="social-card__handle">@sergioludenav</span>
+            <span class="social-card__cta link-action" aria-hidden="true">Seguir</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== 6. CONTACTO ===================== -->
+  <section class="section" id="contacto" aria-labelledby="contacto-title">
+    <div class="container contact">
+      <div class="contact__intro reveal">
+        <div class="section-head">
+          <h2 id="contacto-title">Contacto</h2>
+        </div>
+        <!-- WP: texto introductorio → get_theme_mod('contacto_intro') -->
+        <p>Para consultas institucionales, gestión directiva o prensa, puede ponerse en contacto a través del formulario o vía correo electrónico.</p>
+        <!-- WP: correo → get_theme_mod('contacto_email') -->
+        <a class="contact__email" href="mailto:contacto@sergioludena.com">contacto@sergioludena.com</a>
+      </div>
+
+      <!-- WP: el envío real se resolverá en WordPress (wp_mail con nonce + admin-post.php, o plugin de formularios).
+           action="#" es provisional. Los mensajes se derivarán automáticamente a contacto@sergioludena.com. -->
+      <form class="form reveal" id="contact-form" action="#" method="post" novalidate>
+        <div class="form__field">
+          <label class="form__label" for="f-nombre">Nombre y Apellido <span class="req" aria-hidden="true">*</span></label>
+          <input class="form__input" id="f-nombre" name="nombre" type="text" autocomplete="name" required aria-required="true" aria-describedby="f-nombre-error" data-validate>
+          <p class="form__error" id="f-nombre-error" aria-live="polite"></p>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="f-email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+          <input class="form__input" id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-required="true" aria-describedby="f-email-error" data-validate>
+          <p class="form__error" id="f-email-error" aria-live="polite"></p>
+        </div>
+        <div class="form__field form__field--full">
+          <label class="form__label" for="f-asunto">Asunto / Institución <span class="req" aria-hidden="true">*</span></label>
+          <input class="form__input" id="f-asunto" name="asunto" type="text" autocomplete="organization" required aria-required="true" aria-describedby="f-asunto-error" data-validate>
+          <p class="form__error" id="f-asunto-error" aria-live="polite"></p>
+        </div>
+        <div class="form__field form__field--full">
+          <label class="form__label" for="f-mensaje">Mensaje <span class="req" aria-hidden="true">*</span></label>
+          <textarea class="form__input" id="f-mensaje" name="mensaje" rows="6" minlength="20" required aria-required="true" aria-describedby="f-mensaje-error" data-validate></textarea>
+          <p class="form__error" id="f-mensaje-error" aria-live="polite"></p>
+        </div>
+        <div class="form__actions">
+          <p class="form__status" role="status" aria-live="polite" hidden></p>
+          <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+          <p class="form__note">Los campos marcados con * son obligatorios.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     partials/footer.html  →  footer.php
+     Incluido tal cual en todas las páginas del prototipo.
+     En WordPress: <?php get_footer(); ?>  (incluye wp_footer()).
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <!-- WP: bloginfo('name') -->
+        <a class="site-footer__brand" href="index.html#inicio">SERGIO LUDEÑA VISALOT</a>
+        <p class="site-footer__tagline">Empresario y líder en gestión deportiva.</p>
+      </div>
+
+      <nav aria-label="Menú del pie de página">
+        <h2>Navegación</h2>
+        <!-- WP: wp_nav_menu( array( 'theme_location' => 'pie' ) ) -->
+        <ul class="site-footer__menu">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#trayectoria">Trayectoria</a></li>
+          <li><a href="opinion.html">Opinión</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2>Redes y contacto</h2>
+        <!-- WP: URLs de redes → opciones del Personalizador (get_theme_mod) -->
+        <ul class="site-footer__social">
+          <li><a href="https://www.facebook.com/sergioludenav" target="_blank" rel="noopener" aria-label="Facebook (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a href="https://www.instagram.com/sergioludenav" target="_blank" rel="noopener" aria-label="Instagram (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/sergioludenav" target="_blank" rel="noopener" aria-label="LinkedIn (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+          <li><a href="https://x.com/sergioludenav" target="_blank" rel="noopener" aria-label="X (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+          <li><a href="https://www.tiktok.com/@sergioludenav" target="_blank" rel="noopener" aria-label="TikTok (se abre en una pestaña nueva)"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+        </ul>
+        <a href="mailto:contacto@sergioludena.com">contacto@sergioludena.com</a>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <!-- WP: © <?php echo date('Y'); ?> bloginfo('name') -->
+      <p>© <span data-year>2026</span> Sergio Ludeña Visalot. Todos los derechos reservados.</p>
+      <p>Lima, Perú</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WP: wp_enqueue_script en functions.php, cargado con 'defer' -->
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
