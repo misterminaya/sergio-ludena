@@ -39,9 +39,9 @@ vuelve a pegarlo en las cuatro páginas (o regenera con el script de ensamblado 
 ### Portada (`front-page.php`)
 - Hero: h1 (nombre), subtítulo (`bloginfo('description')`), extracto institucional, foto principal (sin lazy, es la imagen LCP).
 - Cita directiva y firma.
-- Perfil profesional (3 párrafos) y panel "En síntesis" con datos clave del brief (campos etiqueta + valor).
-- Línea de tiempo (6 cargos clave) → campos repetibles o HTML de la portada.
-- Acordeones: Experiencia completa, Formación académica, Especializaciones y certificaciones, Trayectoria deportiva.
+- Trayectoria con cinco bloques: Perfil profesional (3 párrafos), Experiencia profesional, Formación académica, Especializaciones y certificaciones, Trayectoria deportiva.
+- Experiencia profesional: línea de tiempo con los 7 cargos completos → campos repetibles o HTML de la portada.
+- Acordeones: Formación académica, Especializaciones y certificaciones, Trayectoria deportiva.
 - Opinión → `WP_Query` con `posts_per_page => 3`; cada card usa `the_time`, `the_category`, `the_title`, `the_excerpt`, `the_post_thumbnail`.
 - Botón "Ver todas" → `get_permalink( get_option('page_for_posts') )`.
 - Redes → cada tarjeta es un enlace (`<a class="social-card">`) con URL del Personalizador; "Seguir" es texto dentro del enlace. Sin feeds ni scripts de terceros.
