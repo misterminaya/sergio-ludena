@@ -415,13 +415,21 @@ ul, ol { margin: 0; padding: 0; }
   text-wrap: pretty;      /* evita palabras sueltas en la última línea */
 }
 @media (max-width: 47.99em) {
-  .hero__excerpt { font-size: 1rem; line-height: 1.6; hyphens: auto; -webkit-hyphens: auto; }
+  /* Móvil: la foto va primero y compacta, para que el retrato se vea sin empujar
+     el texto fuera de la primera pantalla. Sin guiones en el extracto (evita "Jue-gos"). */
+  .hero { padding-block: var(--s-5) var(--s-8); }
+  .hero__grid { gap: var(--s-5); }
+  .hero__figure { order: -1; max-width: 9.5rem; }
+  .hero__name { margin-bottom: var(--s-2); }
+  .hero__subtitle { letter-spacing: 0.06em; margin-bottom: var(--s-4); text-wrap: balance; }
+  .hero__excerpt { font-size: 1rem; line-height: 1.6; margin-bottom: var(--s-5); }
+  .hero__actions { margin-bottom: var(--s-4); }
   .profile p { hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; }
 }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-bottom: var(--s-6); }
 @media (max-width: 29.99em) {
   .hero__actions .btn, .error-page__actions .btn { flex: 1 1 100%; }
-  .hero .social-inline { justify-content: center; gap: var(--s-3); }
+  .hero .social-inline { gap: var(--s-2); margin-left: -0.625rem; } /* alinea el primer ícono con el texto */
 }
 
 .social-inline { list-style: none; display: flex; gap: var(--s-1); }
@@ -947,6 +955,7 @@ textarea.form__input { min-height: 9rem; resize: vertical; }
   .js .hero__actions.hero__enter { animation-delay: 240ms; }
   .js .social-inline.hero__enter { animation-delay: 320ms; }
   .js .hero__figure.hero__enter { animation-delay: 120ms; animation-duration: 900ms; }
+  @media (max-width: 47.99em) { .js .hero__figure.hero__enter { animation-delay: 0ms; } }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
