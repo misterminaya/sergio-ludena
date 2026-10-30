@@ -468,7 +468,17 @@ ul, ol { margin: 0; padding: 0; }
 }
 
 /* ---------- 8. Cita directiva ---------- */
-.quote { padding-block: clamp(4rem, 9vw, 8rem); }
+.quote {
+  padding-block: clamp(4rem, 9vw, 8rem);
+  /* Mismo fondo que el header: fachada con capa del color primario encima */
+  background-color: var(--c-primary);
+  background-image:
+    linear-gradient(rgba(30, 34, 56, 0.82), rgba(30, 34, 56, 0.82)),
+    url("../img/bglunback.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .quote blockquote { margin: 0; max-width: 56rem; }
 .quote__text {
   font-family: var(--f-display);
