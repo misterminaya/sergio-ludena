@@ -29,6 +29,7 @@
   --c-accent: #9B1B30;         /* carmesí: líneas, detalles, hover, enlaces */
   --c-accent-hover: #7E1527;
   --c-accent-on-dark: #E8A0AE; /* carmesí aclarado para usarse sobre azul (contraste AA) */
+  --c-nav-underline: #707EA1;  /* subrayado del menú del header (pedido del cliente) */
   --c-soft: #FFF7F9;           /* "carmesí claro" del brief: fondo suave de secciones alternas */
   --c-tint: #FBEDF0;           /* tinte carmesí para estados hover de tarjetas */
   --c-neutral: #F4F5F7;
@@ -344,12 +345,12 @@ ul, ol { margin: 0; padding: 0; }
 .site-nav__link:focus-visible { outline-color: var(--c-white); }
 .site-nav__link.is-active, .site-nav__link[aria-current="page"] {
   color: var(--c-white);
-  border-left-color: var(--c-accent-on-dark);
+  border-left-color: var(--c-nav-underline);
 }
 .site-nav__link { position: relative; }
 .site-nav__link::after {
   content: ""; position: absolute; left: var(--s-3); right: var(--s-3); bottom: -2px;
-  height: 2px; background: var(--c-accent-on-dark);
+  height: 2px; background: var(--c-nav-underline);
   transform: scaleX(0); transform-origin: left; transition: transform var(--t-med);
 }
 
