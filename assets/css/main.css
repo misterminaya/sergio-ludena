@@ -897,7 +897,7 @@ textarea.form__input { min-height: 9rem; resize: vertical; }
 .widget { padding-top: var(--s-5); border-top: 2px solid var(--c-primary); }
 .widget--author { border-top-color: var(--c-accent); }
 .widget__title { font-family: var(--f-display); font-size: var(--fs-md); color: var(--c-primary); margin-bottom: var(--s-3); }
-.widget__avatar { width: 5rem; height: 5rem; object-fit: cover; border-radius: 50%; margin-bottom: var(--s-4); }
+.widget__avatar { width: 5rem; height: 5rem; object-fit: cover; object-position: 50% 15%; /* encuadra el rostro de la foto vertical */ border-radius: 50%; margin-bottom: var(--s-4); }
 .widget__subtitle { font-weight: 600; color: var(--c-accent); font-size: var(--fs-sm); margin-bottom: var(--s-2); }
 .widget__text { color: var(--c-muted); font-size: var(--fs-sm); margin-bottom: var(--s-3); }
 .widget__social { margin-top: var(--s-3); margin-left: calc(var(--s-2) * -1); }
