@@ -260,7 +260,15 @@ ul, ol { margin: 0; padding: 0; }
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 900;
-  background: var(--c-primary);
+  /* Fondo: fachada (bglunback.png) escalada con cover para no deformarla, con capa
+     del color primario encima para que el menú siga legible. WP: get_header_image() */
+  background-color: var(--c-primary);
+  background-image:
+    linear-gradient(rgba(30, 34, 56, 0.82), rgba(30, 34, 56, 0.82)),
+    url("../img/bglunback.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--c-white);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: box-shadow var(--t-med);
